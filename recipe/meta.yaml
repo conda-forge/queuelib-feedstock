@@ -11,21 +11,25 @@ source:
   sha256: 2855162096cf0230510890b354379ea1c0ff19d105d3147d349d2433bb222b08
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.8
   run:
-    - python >=3.5
+    - python >=3.8
 
 test:
   imports:
     - queuelib
     - queuelib.tests
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/scrapy/queuelib
