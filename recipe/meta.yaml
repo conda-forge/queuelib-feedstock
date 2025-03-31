@@ -27,6 +27,8 @@ test:
   imports:
     - queuelib
     - queuelib.tests
+  source_files:
+    - queuelib
   commands:
     - pip check
     - pytest queuelib
