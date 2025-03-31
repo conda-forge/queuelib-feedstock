@@ -29,7 +29,7 @@ test:
     - queuelib.tests
   commands:
     - pip check
-    - pytest tests
+    - pytest queuelib
   requires:
     - pip
     - python {{ python_min }}
