@@ -1,5 +1,5 @@
 {% set name = "queuelib" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2855162096cf0230510890b354379ea1c0ff19d105d3147d349d2433bb222b08
+  sha256: 582bc65514481100b0539bd671da6b355b878869cfc77d92c63b75fcc9cf8e27
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
