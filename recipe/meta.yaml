@@ -19,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
 
@@ -29,9 +29,11 @@ test:
     - queuelib.tests
   commands:
     - pip check
+    - pytest tests
   requires:
     - pip
     - python {{ python_min }}
+    - pytest
 
 about:
   home: https://github.com/scrapy/queuelib
