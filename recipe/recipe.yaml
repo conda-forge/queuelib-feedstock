@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: queuelib
-  version: 1.9.0
+  version: "1.10.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: b12fea79fd8c1dd23e212b1f3db58003b773949801d4f4e6f34d882467d4a192
+  sha256: 063c821c32859ae8bdce2cc9e74156645c074218a464f8262e29a3b8de839737
 
 build:
   number: 0
