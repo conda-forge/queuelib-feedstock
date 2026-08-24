@@ -1,15 +1,14 @@
 schema_version: 1
 
 context:
-  name: queuelib
   version: "1.10.0"
 
 package:
-  name: ${{ name|lower }}
+  name: queuelib
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/q/queuelib/queuelib-${{ version }}.tar.gz
   sha256: 063c821c32859ae8bdce2cc9e74156645c074218a464f8262e29a3b8de839737
 
 build:
@@ -31,7 +30,9 @@ tests:
         - queuelib
         - queuelib.tests
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version: 
+        - ${{ python_min }}.*
+        - "*"
   - files:
       source:
         - queuelib
